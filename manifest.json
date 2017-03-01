@@ -1,0 +1,34 @@
+{
+  "manifest_version": 2,
+
+  "name": "My friend Catherine",
+  "description": "This extension will replace all boring 'my cat' phrases on page for something beatifull",
+  "version": "0.1.3",
+  "version_name": "dev-alpha 13",
+  "author":"alexkorkod",
+
+  //"default_locale": "en",
+  "browser_action": {
+    "default_title": "Transform my cat!",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      //"css": ["mystyles.css"],
+      "js": ["content.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "desktopCapture",
+    "pageCapture",
+    "tabs"
+    //"https://ajax.googleapis.com/"
+  ]
+  /*"background": {
+    "persistent": false
+  }*/
+}
